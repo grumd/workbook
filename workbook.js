@@ -136,6 +136,10 @@
                 cell.z = 'm/d/yy';
                 cell.v = datenum(cell.v);
               }
+              else if (cell.v[0] === '=') {
+                cell.t = 's';
+                cell.f = cell.v;
+              }
               else cell.t = 's';
 
               ws[cell_ref] = cell;
